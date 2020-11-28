@@ -1,0 +1,319 @@
+{%load static%}
+<html>
+
+<head>
+    <title>FEASTA</title> 
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href={% static "cart-images/favicon.ico"%} type="image/x-icon">
+    <link rel="apple-touch-icon" href={% static "cart-images/apple-touch-icon.png"%}>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href={% static "cart-css/bootstrap.min.css"%}>    
+    <!-- Site CSS -->
+    <link rel="stylesheet" href={% static "cart-css/style.css"%}>    
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href={% static "cart-css/responsive.css"%}>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href={% static "cart-css/custom.css"%}>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!--===============================================================================================-->  
+    <link rel="icon" type="image/png" href={% static "LOGIN/Login_v9/images/icons/favicon.ico"%}/>
+    <link rel="stylesheet" href={% static "Test.css"%}>
+    <!-- Custom fonts for this template-->
+    <link href={% static "cart-vendor/fontawesome-free/css/all.min.css"%} rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href={% static "cart-css/sb-admin-2.min.css"%} rel="stylesheet">
+    <!--===============================================================================================-->
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <!--===============================================================================================-->
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Start header -->
+    <header class="top-navbar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a href={% url 'home' %}>
+                    <img src={% static "cart-images\logo.png"%} alt="img" width="10%" height="10%" style="min-height: 70px; min-width: 140px">
+                </a> 
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation"  style="min-height: 30%;">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbars-rs-food">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href={% url 'home' %}>Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href={% url 'menu' %}>Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href={% url 'about' %}>About</a></li>
+                        <!--<li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown-a">
+                                <a class="dropdown-item" href="reservation.html">Reservation</a>
+                                <a class="dropdown-item" href="stuff.html">Stuff</a>
+                                <a class="dropdown-item" href="gallery.html">Gallery</a>
+                            </div>
+                        </li>-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Blog</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown-a">
+                                <a class="dropdown-item" href={% url 'blog' %}>blog</a>
+                                <a class="dropdown-item" href={% url 'blog-details' %}>blog Single</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href={% url 'contact' %}>Contact</a></li>
+                        <li class="nav-item active"><a class="nav-link" href={% url 'login' %}>Sign in</a></li>
+                        <li style="font-size:30px; margin-left:20px;"><a href={% url 'cart' %}><i class="fas fa-shopping-cart" style="color:black;"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- End header -->
+    <br><br><br><br><br>
+    <div class="container-fluid" style="position: relative;">
+        <div class="card shadow mb-4 mt-4">
+            <div class="card-body pt-4 pb-4">
+                <h1 class="text-center mt-2" style="font-size: 300%; color: #fd7e14 ;font-family: 'Lobster', cursive;">Shopping cart
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="mr-4 ml-4 mb-2 mt-2">
+            <div class="card shadow mb-4">
+                <div class="card-body pt-2">
+                    <section id="cart">
+                        <article class="product">
+                            <header>
+                                
+                                    <img src={% static "cart-images/gallery-img-01.jpg"%}
+                                        alt="">
+
+                                    <img src="http://www.astudio.si/preview/blockedwp/wp-content/uploads/2012/08/1.jpg"
+                                         alt="" class="img-fluid">
+
+
+                                    
+                                </a>
+                            </header>
+
+                            <div class="content">
+
+
+                                <h1 style="font-size: 250%;">Vada Pav</h1>
+
+                              
+
+                               
+                            </div>
+
+                            <footer class="content" >
+                                <span class="qt-minus">-</span>
+                                <span class="qt">1</span>
+                                <span class="qt-plus">+</span>
+                                <Button type="button" class="remove  btn-danger badge-pill mt-2 ml-3" style="width: 80px; background-color:#d52a1a"><i
+                            class="fas fa-fw fa-trash-alt"></i></Button>
+
+ 
+                                <h2 class="full-price p-2">
+                                  20.00 RS
+                                </h2>
+
+                                <h2 class="price mt-2" style="font-size: 20PX;">
+                                    20.00 RS
+
+                                </h2>
+                            </footer>
+                        </article>
+                        <hr>
+                        <article class="product">
+                            <header>
+                                <a>
+                                    <img src={% static "cart-images/gallery-img-02.jpg"%}
+                                        alt="">
+
+                                   
+                                </a>
+                            </header>
+
+                            <div class="content">
+
+ 
+                                <h1 style="font-size: 250%;">Pav Bhaji</h1>
+
+                             
+
+                               
+ 
+
+                            </div>
+
+                            <footer class="content">
+
+                                <span class="qt-minus">-</span>
+                                <span class="qt">1</span>
+                                <span class="qt-plus">+</span>
+                                <Button type="button" class="remove  btn-danger badge-pill mt-2 ml-3" style="width: 80px; background-color:#d52a1a"><i
+                            class="fas fa-fw fa-trash-alt"></i></Button>
+
+
+                                <h2 class="full-price p-2">
+                                   80.00 RS
+                                </h2>
+
+                                <h2 class="price mt-2" style="font-size: 20PX;">
+                                    80.00 RS
+
+                                
+ 
+                                </h2>
+                            </footer>
+                        </article>
+
+                        <article class="product">
+                            <header>
+                                
+                                    <img src={% static "cart-images/gallery-img-03.jpg"%}
+                                        alt="">
+
+                                    
+                                </a>
+                            </header>
+
+                            <div class="content">
+
+ 
+                                <h1 style="font-size: 250%;">South Indian Dosa</h1>
+
+                               
+
+
+                                
+
+                            </div>
+
+                            <footer class="content">
+
+                                <span class="qt-minus">-</span>
+                                <span class="qt">1</span>
+                                <span class="qt-plus">+</span>
+                                <Button type="button" class="remove  btn-danger badge-pill mt-2 ml-3 " style="width: 80px; background-color:#d52a1a"><i
+                            class="fas fa-fw fa-trash-alt"></i></Button>
+
+ 
+                                <h2 class="full-price p-2">
+                                    100.00 RS
+                                </h2>
+
+                                <h2 class="price mt-2" style="font-size: 20PX;">
+                                    100.00 RS
+
+                                
+                                </h2>
+                            </footer>
+                        </article>
+
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="site-footer">
+        <div class="container clearfix">
+
+            <div class="left">
+                <h2 class="subtotal">Subtotal: <span>200.00 </span>RS</h2>
+                <h3 class="tax">Taxes (5%): <span>10 </span>RS</h3>
+                
+            </div>
+
+            <div class="right">
+ 
+                <h1 class="total">Total: <span>215.00 </span>Rs</h1>
+                <a class="btn btn-primary text-white pt-3 pb-3 badge-pill" style="font-size: 150%; font-family: 'PT Sans', sans-serif;" >Checkout</a>
+
+                
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Start Footer -->
+    <footer class="footer-area bg-f">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <h3>About Us</h3>
+                    <p>Our diner serves breakfast all day, in addition to wholesome and flavorful dining options for lunch. From burgers to Vadapav, you’ll find all kinds of hearty meals prepared fresh at FEASTA</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3>Follow Us</h3>
+
+                    <ul class="list-inline f-social">
+                        <li class="list-inline-item"><a href="https://www.facebook.com/hilay.trivedi"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        &nbsp;
+                        &nbsp;
+                        <li class="list-inline-item"><a href="https://www.linkedin.com/in/hilay-trivedi-493b121b1/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        &nbsp;
+                        &nbsp;
+                        <li class="list-inline-item"><a href="https://www.instagram.com/hilaytrivedi24/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3>Contact information</h3>
+                    <p class="lead">L.J Engineering college, Sarkhej,AHMEDABAD</p>
+                    <p class="lead"><a href="#">+918141046583</a></p>
+                    <p><a href="#"> hilaytrivedi.ht@gmail.com</a></p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3>Opening hours</h3>
+                    <p><span class="text-color">Sunday: </span>Closed</p>
+                    <p><span class="text-color">Mon-Sat :</span> 8:Am - 6PM</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="company-name">All Rights Reserved. &copy; 2020 <a href="#">FEASTA</a>  
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+    <!-- End Footer -->
+    <script src={% static "cart-jquery.min.js"%}></script>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src={% static "cart-vendor/jquery/jquery.min.js"%}></script>
+    <script src={% static "cart-vendor/bootstrap/js/bootstrap.bundle.min.js"%}></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src={% static "cart-vendor/jquery-easing/jquery.easing.min.js"%}></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src={% static "cart-js/sb-admin-2.min.js"%}></script>
+    <script src={% static "Test.js"%}></script>
+    <!-- Page level plugins -->
+    <script src={% static "cart-vendor/chart.js/Chart.min.js"%}></script>
+
+    <!-- Page level custom scripts -->
+    <script src={% static "cart-js/demo/chart-area-demo.js"%}></script>
+    <script src={% static "cart-js/demo/chart-pie-demo.js"%}></script>
+    <script src="https://kit.fontawesome.com/c7481ccc70.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
